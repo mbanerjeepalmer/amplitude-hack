@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Masurian</title>
-    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <h1>Enrich your data</h1>
+  <body class="container max-w-3xl min-h-screen mx-auto p-4 sm:p-6 lg:p-8">
+    <h1 class="text-4xl">Enrich your data</h1>
     
-    <section>
-      <h2>Your Amplitude credentials</h2>
+    <section class="flex flex-col space-y-4">
+      <h2 class="text-2xl my-4">Your Amplitude credentials</h2>
       <div>
         <label for="app_id"
           >The Project ID of the project your chart belongs to.</label
         >
-        <input type="text" id="app_id" />
+        <input type="text" class="bg-transparent py-2 px-4 border border-blue-500 rounded my-2 w-auto" id="app_id" />
       </div>
       <div>
         <label for="chart_id"
@@ -24,35 +24,35 @@
           don't include a chart_id, the annotation is global and appears on all
           charts in the project.</label
         >
-        <input type="text" id="chart_id" />
+        <input type="text" class="bg-transparent py-2 px-4 border border-blue-500 rounded my-2 w-auto" id="chart_id" />
       </div>
       <div>
         <label for="api_key">Project API key</label>
-        <input type="text" id="api_key" />
+        <input type="text" class="bg-transparent py-2 px-4 border border-blue-500 rounded my-2 w-auto" id="api_key" />
       </div>
       <div>
         <label for="secret_key">Project secret key</label>
-        <input type="text" id="secret_key" />
+        <input type="text" class="bg-transparent py-2 px-4 border border-blue-500 rounded my-2 w-auto" id="secret_key" />
       </div>
     </section>
-        <section>
+        <section class="flex flex-col space-y-4">
           <div>
             <h3>External data</h3>
             <div>
               <label for="endpoint">API endpoint</label>
-              <input type="text" id="endpoint" />
+              <input type="text" class="bg-transparent py-2 px-4 border border-blue-500 rounded my-2 w-auto" id="endpoint" />
             </div>
             <div>
               <label for="query">URL query string</label>
-              <input type="text" id="query" />
+              <input type="text" class="bg-transparent py-2 px-4 border border-blue-500 rounded my-2 w-auto" id="query" />
             </div>
-            <button id="external">Get external data</button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-2" id="external">Get external data</button>
           </div>
         </section>
-        <section>
-      <h2>Enrich with annotations</h2>
+        <section class="flex flex-col space-y-4">
+      <h2 class="text-2xl my-4">Enrich using annotations</h2>
       <div id="code-container"></div>
-      <button id="enrich">Enrich me</button>
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-2" id="enrich">Enrich me</button>
     </section>
     <script src="index.js"></script>
   </body>
