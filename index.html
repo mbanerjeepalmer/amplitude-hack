@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Masurian</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Enrich your data</h1>
+    
+    <section>
+      <h2>Your Amplitude credentials</h2>
+      <div>
+        <label for="app_id"
+          >The Project ID of the project your chart belongs to.</label
+        >
+        <input type="text" id="app_id" />
+      </div>
+      <div>
+        <label for="chart_id"
+          >(Optional.) The ID of the chart (found in URL) to annotate. If you
+          don't include a chart_id, the annotation is global and appears on all
+          charts in the project.</label
+        >
+        <input type="text" id="chart_id" />
+      </div>
+      <div>
+        <label for="api_key">Project API key</label>
+        <input type="text" id="api_key" />
+      </div>
+      <div>
+        <label for="secret_key">Project secret key</label>
+        <input type="text" id="secret_key" />
+      </div>
+    </section>
+        <section>
+          <div>
+            <h3>External data</h3>
+            <div>
+              <label for="endpoint">API endpoint</label>
+              <input type="text" id="endpoint" />
+            </div>
+            <div>
+              <label for="query">URL query string</label>
+              <input type="text" id="query" />
+            </div>
+            <button id="external">Get external data</button>
+          </div>
+        </section>
+        <section>
+      <h2>Enrich with annotations</h2>
+      <div id="code-container"></div>
+      <button id="enrich">Enrich me</button>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
